@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import MenuIcon from "@material-ui/icons/Menu";
 import routes from "../../routes";
 
-const listRoutes = ["dashboard", "categories.list"];
+const listRoutes = ["dashboard", "categories.list", "genres.list"];
 export const Menu = () => {
   const menuRoutes = routes.filter((route) => listRoutes.includes(route.name));
   const [anchorEl, setAnchorEl] = useState(null);
