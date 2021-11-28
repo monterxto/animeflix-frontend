@@ -1,6 +1,7 @@
 import MUIDataTable, { MUIDataTableColumn } from "mui-datatables";
 import { FC, useEffect, useState } from "react";
 import categoryHttp from "../../util/http/category-http";
+import {BadgeNo, BadgeYes} from "../../components/Badge";
 
 const columnsDefinitions: MUIDataTableColumn[] = [
   {
@@ -8,11 +9,15 @@ const columnsDefinitions: MUIDataTableColumn[] = [
     label: "Name",
   },
   {
+    name: "description",
+    label: "Descrição",
+  },
+  {
     name: "is_active",
     label: "Ativo",
     options: {
       customBodyRender: (value) => {
-        return value ? "Sim" : "Não";
+        return value ? <BadgeYes/> : <BadgeNo/>;
       }
     }
   },

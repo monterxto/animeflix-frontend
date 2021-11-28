@@ -8,7 +8,7 @@ export default class HttpResource {
     return this.http.get(this.resource);
   }
 
-  get(id: number) {
+  get(id: string) {
     return this.http.get(`${this.resource}/${id}`);
   }
 
@@ -16,11 +16,11 @@ export default class HttpResource {
     return this.http.post(this.resource, data);
   }
 
-  update(id: number, data: any) {
-    return this.http.put(`${this.resource}/${id}`, data);
+  update(id: string, data: any) {
+    return this.http.patch(`${this.resource}/${id}`, data);
   }
 
-  delete(id: number) {
+  delete(id: string) {
     return this.http.delete(`${this.resource}/${id}`);
   }
 

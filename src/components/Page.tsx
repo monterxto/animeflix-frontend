@@ -3,7 +3,7 @@ import { FC } from 'react';
 
 const useStyles = makeStyles((theme) => ({
   title: {
-    color: '#999999'
+    color: '#f8f8f2'
   }
 }));
 

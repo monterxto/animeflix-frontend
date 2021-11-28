@@ -8,21 +8,18 @@ import {Box, Container, createStyles, makeStyles} from "@material-ui/core";
 import {Location} from 'history'
 import routes from "../routes";
 import RouteParser from 'route-parser';
-
+import theme from "../theme";
 const breadcrumbNameMap: { [key: string]: string } = {};
 routes.forEach(route => breadcrumbNameMap[route.path as string] = route.label);
 
 const useStyles = makeStyles(() =>
     createStyles({
         linkRouter: {
-            color: '#000fdf',
-            "&:focus, &:active": {
-                color: '#000fdf'
-            },
-            "&:hover": {
-                color: '#00043b'
-            }
-        }
+            color: theme.palette.primary.dark,
+        },
+        active: {
+            color: theme.palette.primary.main,
+        },
     }),
 );
 

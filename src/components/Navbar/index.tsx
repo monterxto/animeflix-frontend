@@ -9,6 +9,7 @@ import {
 import { FC } from "react";
 import logo from "../../static/img/logo.png";
 import { Menu } from "./Menu";
+import { Link } from "react-router-dom";
 
 const useStyles = makeStyles((theme: Theme) => {
   return {
@@ -41,7 +42,9 @@ export const Navbar: FC = () => {
       <Toolbar className={classes.toolbar}>
         <Menu />
         <Typography variant="h6" className={classes.title}>
-          <img src={logo} alt="AnimeFlix" className={classes.logo} />
+          <Link to="/">
+            <img src={logo} alt="AnimeFlix" className={classes.logo} />
+          </Link>
         </Typography>
         <Button color="inherit">Login</Button>
       </Toolbar>
