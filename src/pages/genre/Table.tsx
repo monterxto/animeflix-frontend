@@ -7,10 +7,11 @@ const columnsDefinitions: MUIDataTableColumn[] = [
     label: "Name",
   },
   {
-    name: "categories",
+    name: "categoriesId",
     label: "Categorias",
     options: {
       customBodyRender: (value) => {
+        console.log(value);
         return value.map((category) => category.name).join(", ");
       }
     }
@@ -39,7 +40,7 @@ const Table: FC = () => {
   const [genres, setGenres] = useState<any[]>([]);
 
   useEffect(() => {
-    genreHttp.list().then((response) => {
+    genreHttp.listWithCategories().then((response) => {
       setGenres(response.data);
     });
   }, []);

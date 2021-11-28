@@ -8,10 +8,11 @@ import Table from './Table';
 const PageList: FC = () => {
   return (
     <Page title="Listagem de categoria">
-      <Box dir="rtl">
+      <Box dir="rtl" paddingBottom={2}>
         <Fab
           title="Adicionar categoria"
           size="small"
+          color="secondary"
           component={Link}
           to="/categories/create"
         >
